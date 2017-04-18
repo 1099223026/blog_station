@@ -1,0 +1,42 @@
+<admintpl file="header" />
+</head>
+<body style="min-width: 800px;">
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('Consume/index')}">消费查看</a></li>
+		</ul>
+		<form method="post">
+			<table class="table table-hover table-bordered table-list">
+				<thead>
+					<tr>
+                        <th width="30">消费日期</th>
+						<th width="40">消费名称</th>
+						<th width="30">单价(元/个)</th>
+						<th width="30">数量(个)</th>
+						<th width="30">金额(￥)</th>
+						<th width="30">季度</th>
+						<th width="30">操作</th>
+					</tr>
+				</thead>
+				<foreach name="data" item="d">
+					<tr>
+                        <td>{$d['date']}</td>
+						<td>{$d['name']}</td>
+						<td>{$d['price']}</td>
+                        <td>{$d['number']}</td>
+                        <td>{$d['money']}</td>
+                        <td>{$d['quarter']}</td>
+						<td>
+							<a href="{:U('Consume/index/payUpdate',array('data'=>$d))}">修改</a>
+							<a href="{:U('Consume/index/payRemove',array('data'=>$d))}">{:L('DELETE')}</a>
+						</td>
+					</tr>
+				</foreach>
+
+			</table>
+            <div class="meneame">{$page}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('Consume/index')}">修改消费信息</a></li>
+    </ul>
+    <form class="form-horizontal" method="post" action="{:U('Consume/index/payUpdate')}">
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label" >消费日期：</label>
+                <div class="controls">
+                    <input type="text" name="date" value="{$data['date']}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >消费名称：</label>
+                <div class="controls">
+                    <input type="hidden" name="id" value="{$data['id']}">
+                    <input type="text" name="name" value="{$data['name']}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >单价：</label>
+                <div class="controls">
+                    <input type="text" name="price" value="{$data['price']}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >数量：</label>
+                <div class="controls">
+                    <input type="text" name="number" value="{$data['number']}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >金额：</label>
+                <div class="controls">
+                    <input type="text" name="money" value="{$data['money']}">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >季度：</label>
+                <div class="controls">
+                    <input type="text" name="quarter" value="{$data['quarter']}">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">{:L('SAVE')}</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

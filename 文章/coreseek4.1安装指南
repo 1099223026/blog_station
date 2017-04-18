@@ -1,0 +1,72 @@
+博客系统后面会有很多的博文，为方便搜索，想通过sphinx全文搜索引擎来提高文章的搜索速度，coreseek是基于sphinx开发的，特别是coreseek的中文分词，要比sphinx本身的强大一些；sphinx只支持mysql数据源，而coreseek支持更多。
+
+配置环境：lamp+centos2.6.32-504.30.3.el6.x86_64
+
+# 安装依赖包
+[root@E sphinx]# yum install make gcc g++ gcc-c++ libtool autoconf automake imake mysql-devel libxml2-devel expat-devel
+
+#在百度云盘下载资源： coreseek4.1
+
+# 解压缩
+[root@E sphinx]# tar zxvf coreseek-4.1-beta.tar.gz
+​
+# 安装mmseg
+[root@E sphinx]# cd coreseek-4.1-beta/mmseg-3.2.14/
+# 测试系统是否满足安装
+[root@E mmseg-3.2.14]# ./bootstrap     # 出现-bash: ./bootstrap: Permission denied  解决办法：chmod +x bootstrap
+# 执行配置检测
+[root@E mmseg-3.2.14]# ./configure --prefix=/usr/local/mmseg3
+[root@E mmseg-3.2.14]# make && make install
+[root@E mmseg-3.2.14]# cd ..
+
+# 安装coreseek
+[root@E coreseek-4.1-beta]# cd csft-4.1/
+[root@E csft-4.1]# sh buildconf.sh # 输出的warning信息可以忽略，如果出现error则需要解决
+[root@E csft-4.1]# ./configure --prefix=/usr/local/coreseek --without-unixodbc --with-mmseg --with-mmseg-includes=/usr/local/mmseg3/include/mmseg/ --with-mmseg-libs=/usr/local/mmseg3/lib/ --with-mysql
+[root@E csft-4.1]# make && make install
+[root@E csft-4.1]# cd ..
+
+# 测试mmseg分词
+[root@E coreseek-4.1-beta]# cd testpack/
+[root@E testpack]# cat var/test/test.xml #此时应该正确显示中文
+
+# mmseg程序 -d 词库目录 指定数据源
+[root@E testpack]# /usr/local/mmseg3/bin/mmseg -d /usr/local/mmseg3/etc var/test/test.xml
+
+# 创建索引
+[root@E testpack]# /usr/local/coreseek/bin/indexer -c etc/csft.conf --all #也可以进入目录./indexer --all
+
+# 执行搜索测试
+[root@E testpack]# /usr/local/coreseek/bin/search -c etc/csft.conf 网络搜索 #也能进入目录./search 网络搜索
+
+# 测试成功
+Coreseek Fulltext 4.1 [ Sphinx 2.0.2-dev (r2922)]
+Copyright (c) 2007-2011,
+Beijing Choice Software Technologies Inc (http://www.coreseek.com)
+ using config file 'etc/csft.conf'...
+index 'xml': query '网络搜索 ': returned 1 matches of 1 total in 0.000 sec
+displaying matches:
+document=1, weight=1590, published=Thu Apr 1 22:20:07 2010, author_id=1
+
+# 配置csft.conf文件
+详情参考官方文档 coreseek4.1
+
+#以下具体可以搜索，下面不一定准确
+# 下载php扩展
+php  sphinx扩展下载
+
+# libsphinxclient 安装（PHP模块需要）
+[root@...]# cd /var/install/coreseek-4.1-beta/csft-4.1/api/libsphinxclient/
+[root@...]# ./configure --with-php-config=/usr/bin/php-config --with-sphinx=/usr/local/sphinx/
+    extension="/usr/local/php/lib/php/extensions/no-debug-zts-20131226/sphinx.so"; 
+[root@...]# make && make install
+
+# 安装php拓展
+[root@...]# cd /usr/local/src/sphinx-1.2.0
+[root@...]# /usr/local/php/bin/phpize
+[root@...]# ./configure --with-php-config=/usr/local/php/bin/php-config --with-sphinx
+[root@...]# make && make install
+
+# 修改php.ini配置文件 
+#添加配置项
+extension="sphinx.so";                                                                                 extension="/usr/local/php/lib/php/extensions/no-debug-zts-20131226/sphinx.so";

@@ -1,0 +1,163 @@
+/*兼容性*/
+/*PC端*/
+@media (min-width: 768px) {
+    .fixed-title{position: fixed;top:0;z-index: 9;background: #fff;}
+    .error-verify-hint{float: left;margin-top: 48px;margin-left: -105px;}
+}
+/*手机端*/
+@media (max-width: 767px) {
+    .fixed-title{position: fixed;top: 0;z-index: 9;background: #fff;width:100%;}
+    .error-verify-hint{float: left;margin-top: 48px;margin-left: -92px;}
+    /*.line{border-style:double;}*/
+}
+body{font:14px/1.5 "PingFang SC",Helvetica,"Helvetica Neue","微软雅黑",Tahoma,Arial,sans-serif;}
+.brown{color:#e67e22;}
+.gray{color:#999;}
+.grey-bdt{border-top: 1px dashed #e4dede;}
+.pst-rel{position: relative;}
+.wdt-percent{width:100%;}
+.font-wgt-800{font-weight: 800;}
+.inline{display:inline;}
+.inline-block{display: inline-block;}
+.font-12{font-size:12px;}
+.font-14{font-size:14px;}
+.font-15{font-size:15px;}
+.mgn-btm-6{margin-bottom: 6px;}
+.mgnb-20{margin-bottom: 20px;}
+.mgn-tb-10{margin-top:10px;margin-bottom:10px;}
+.mgnb-clear{margin-bottom:0;}
+.mgnr-15{margin-right:15px;}
+.mgnl-5{margin-left:5px;}
+.mgnl--15{margin-left:-15px;}
+.pdgl-clear{padding-left: 0;}
+.pdgb-30{padding-bottom:30px;}
+.pdg-clear{padding: 0;}
+.bdr-clear{border: 0;}
+.bdr-radius-clear{border-radius:0;}
+button{
+    outline:none;
+}
+/*zt*/
+/*文本选中颜色*/
+::selection {
+    background:#e67e22;
+    color:#fff;
+}
+::-moz-selection {
+    background:#e67e22;
+    color:#fff;
+}
+::-webkit-selection {
+    background:#e67e22;
+    color:#fff;
+}
+.limit-num{
+    position: absolute;
+    bottom:0px;
+    right:10px;
+}
+.user-img{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+a.thumb .glyphicon-thumbs-up:hover{
+    color:#251818;
+}
+/*fixed-title*/
+/*fixed-login-exit*/
+.fixed-login-exit{
+    font-size: 14px;
+    color: #505050;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+.canva{
+    z-index: 1;
+    position: relative;
+}
+.fixed-login-exit a{
+    outline:none;
+    z-index: 1;
+    position: relative;
+}
+/*modal*/
+.modal{
+    color:#555;
+}
+/*modal-body*/
+.login-box,.register-box{
+    border-right: 1px solid #e5e5e5;
+}
+.register-link{
+    position: relative;
+}
+.register{
+    position: absolute;
+    right:0;
+}
+/*modal-footer*/
+.modal-footer{
+    padding-top:35px;
+}
+/*login*/
+.login-title, .register-title{
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ebebeb;
+    position: relative;
+    width:120px;
+}
+.login-title:after, .register-title:after{
+    content: "";
+    width: 60px;
+    height: 1px;
+    background: #e67e22;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+.third-logo{
+    height:35px;
+    width:35px;
+    margin-left: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.third-logo img{
+    height: 100%;
+    width:100%;
+}
+/*ident-code*/
+.ident-code input{
+    width:35%;
+}
+.ident-code img{
+    height:33px;
+    width:90px;
+}
+.ident-code a:hover{
+    /*旋转*/
+    transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    /*过渡*/
+    transition:transtorm 1s;
+    -moz-transition:-moz-transform 1s;
+    -webkit-transition:-webkit-transform 1s;
+    -o-transition:-o-transform 1s;
+}
+/*重置样式*/
+input[type="checkbox"]{
+    margin-top:2px;
+}
+.btn-danger{
+    color: #fff;
+    background-color: #e67e22;
+    border-color: #e67e22;
+    outline: none;
+}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .dropdown-toggle.btn-danger{
+    color: #fff;
+    background-color: #e6730d;
+    border-color: #e6730d;
+}

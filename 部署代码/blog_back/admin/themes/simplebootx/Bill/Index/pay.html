@@ -1,0 +1,65 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('Bill/pay')}">支出录入</a></li>
+    </ul>
+    <form class="form-horizontal" method="post" action="{:U('Bill/index/pay')}">
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label" >消费名称：</label>
+                <div class="controls">
+                    <input type="text" name="pay_name" value="桶装水">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >单价：</label>
+                <div class="controls">
+                    <input type="text" name="price" value="7.0">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >数量：</label>
+                <div class="controls">
+                    <input type="text" name="number" value="1">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >金额：</label>
+                <div class="controls">
+                    <input type="text" name="money" value="7.0">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >录入人：</label>
+                <div class="controls">
+                    <input type="text" name="taker" value="向国平">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input-gender">季度：</label>
+                <div class="controls">
+                    <select name="quarter" id="input-gender">
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">消费日期：</label>
+                <div class="controls">
+                    <input type="text" name="pay_date" class="js-date" value="<?php echo date('Y-m-d', time());?>" style="width: 120px;" autocomplete="off">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">{:L('SAVE')}</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

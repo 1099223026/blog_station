@@ -1,0 +1,125 @@
+body{
+    background-color: #efefef;
+    font: normal 14px "Microsoft YaHei","微软雅黑","宋体",helvetica,"Hiragino Sans GB";
+}
+.send-success{
+    background-color: #000;
+    opacity:0.75;
+    text-align: center;
+    width:350px;
+    color: #fff;
+    line-height: 40px;
+    position: fixed;
+    z-index: 1;
+    top: 15px;
+}
+.show{
+    display: block;
+    opacity:0;
+    animation:myfirst 5s;
+    -moz-animation:myfirst 5s; /* Firefox */
+    -webkit-animation:myfirst 5s; /* Safari and Chrome */
+    -o-animation:myfirst 5s; /* Opera */
+}
+
+@keyframes myfirst
+{
+    0%{opacity:0.75}
+    25%{opacity:0.5}
+    50%{opacity:0.25}
+    100%{opacity:0}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    0%{opacity:0.75}
+    25%{opacity:0.5}
+    50%{opacity:0.25}
+    100%{opacity:0}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    0%{opacity:0.75}
+    25%{opacity:0.5}
+    50%{opacity:0.25}
+    100%{opacity:0}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+    0%{opacity:0.75}
+    25%{opacity:0.5}
+    50%{opacity:0.25}
+    100%{opacity:0}
+}
+.hidden{display: none;}
+
+.g-hd {
+    height: 130px;
+}
+.g-bd {
+    position: relative;
+    width: 1000px;
+    padding-bottom: 55px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 3px 3px #cbc9c9;
+}
+.top_tlt {
+    padding: 44px 0 0 70px;
+    font: normal 24px "Microsoft YaHei","微软雅黑","宋体",helvetica,"Hiragino Sans GB";
+    color: #e67e22;
+}
+a.btn-activate{
+    text-decoration: none;
+}
+.m-activate .info-b p a {
+    color: #00ade5;
+}
+.m-activate {
+    height: 454px;
+}
+.acti_img{
+    float: left;
+    margin-top: 68px;
+    width: 38%;
+    text-align: right;
+    margin-right:15px;
+}
+.m-activate .acti_tlt {
+    float: left;
+    width: 50%;
+    margin-top: 68px;
+    font-size: 28px;
+    color: #e67e22;
+}
+.m-activate .info-b p {
+    line-height: 24px;
+    margin:0;
+}
+.m-activate .btn-act-con .btn-activate {
+    display: block;
+    width: 108px;
+    height: 32px;
+    margin-bottom: 10px;
+    background-color: #e67e22;
+    text-align: center;
+    font-size: 16px;
+    line-height: 32px;
+    color: #fff;
+}
+.m-activate .btn-act-con {
+    min-height: 20px;
+}
+.m-activate .info-b .tip {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.m-activate .info-b {
+    float: left;
+    width: 50%;
+    color: #b1b1b1;
+    font-size: 12px;
+}

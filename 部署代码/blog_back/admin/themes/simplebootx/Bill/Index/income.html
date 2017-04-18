@@ -1,0 +1,56 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="{:U('Bill/pay')}">缴费录入</a></li>
+    </ul>
+    <form class="form-horizontal" method="post" action="{:U('Bill/index/income')}">
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label" >缴费人：</label>
+                <div class="controls">
+                    <select name="user">
+                        <foreach name="user" item="vo">
+                            <option value="{$vo['username']}">{$vo['username']}</option>
+                        </foreach>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" >金额：</label>
+                <div class="controls">
+                    <select name="money">
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="50" selected>50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input-gender">季度：</label>
+                <div class="controls">
+                    <select name="quarter">
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">缴费日期：</label>
+                <div class="controls">
+                    <input type="text" name="income_date" class="js-date" value="<?php echo date('Y-m-d', time());?>" style="width: 120px;" autocomplete="off">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">{:L('SAVE')}</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

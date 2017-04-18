@@ -1,0 +1,2636 @@
+2017-04-16 01:32:17 [221.7.82.195][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/blog/web/assets' in /var/www/html/blog/vendor/yiisoft/yii2/web/AssetManager.php:168
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/di/Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/blog/vendor/yiisoft/yii2/di/Container.php(147): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/blog/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/web/View.php(283): yii\web\View->getAssetManager()
+#9 /var/www/html/blog/vendor/yiisoft/yii2/web/AssetBundle.php(118): yii\web\View->registerAssetBundle('yii\\widgets\\Act...')
+#10 /var/www/html/blog/vendor/yiisoft/yii2/widgets/ActiveForm.php(194): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /var/www/html/blog/vendor/yiisoft/yii2/base/Widget.php(73): yii\widgets\ActiveForm->run()
+#12 /var/www/html/blog/views/site/home.php(43): yii\base\Widget::end()
+#13 /var/www/html/blog/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/html/b...')
+#14 /var/www/html/blog/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/html/b...', Array)
+#15 /var/www/html/blog/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/html/b...', Array, Object(app\controllers\SiteController))
+#16 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(367): yii\base\View->render('home', Array, Object(app\controllers\SiteController))
+#17 /var/www/html/blog/controllers/SiteController.php(129): yii\base\Controller->render('home', Array)
+#18 [internal function]: app\controllers\SiteController->actionIndex()
+#19 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#20 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#21 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#22 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site', Array)
+#23 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#25 {main}
+2017-04-16 01:32:17 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '53012'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/blog/web/index.php?r=site'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492306337.609
+    'REQUEST_TIME' => 1492306337
+]
+2017-04-16 02:23:47 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:23:47 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '400'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=report/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=400; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '57846'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309427.625
+    'REQUEST_TIME' => 1492309427
+]
+2017-04-16 02:24:04 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:24:04 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => 'asd '
+]
+
+$_COOKIE = [
+    'scrollTop' => '400'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=report/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=400; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '57855'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=asd+'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=asd+'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309444.211
+    'REQUEST_TIME' => 1492309444
+]
+2017-04-16 02:27:04 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_ERROR already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:42
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:27:04 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => 'asd '
+]
+
+$_COOKIE = [
+    'scrollTop' => '400'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=report/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=400; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58289'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=asd+'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=asd+'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309624.627
+    'REQUEST_TIME' => 1492309624
+]
+2017-04-16 02:27:18 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SPH_MATCH_ALL already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:47
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:27:18 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => 'asd '
+]
+
+$_COOKIE = [
+    'scrollTop' => '400'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=report/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=400; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58291'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=asd+'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=asd+'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309638.369
+    'REQUEST_TIME' => 1492309638
+]
+2017-04-16 02:27:40 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:27:40 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => 'asd '
+]
+
+$_COOKIE = [
+    'scrollTop' => '400'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=report/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=400; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58299'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=asd+'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=asd+'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309660.866
+    'REQUEST_TIME' => 1492309660
+]
+2017-04-16 02:30:13 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:30:13 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => 'asd '
+]
+
+$_COOKIE = [
+    'scrollTop' => '400'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=report/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=400; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58472'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=asd+'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=asd+'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309813.91
+    'REQUEST_TIME' => 1492309813
+]
+2017-04-16 02:30:15 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:30:15 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => 'asd '
+]
+
+$_COOKIE = [
+    'scrollTop' => '400'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=report/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=400; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58473'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=asd+'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=asd+'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309815.157
+    'REQUEST_TIME' => 1492309815
+]
+2017-04-16 02:31:06 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SPH_GROUPBY_DAY already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:92
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:31:06 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => 'asd '
+]
+
+$_COOKIE = [
+    'scrollTop' => '400'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=report/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=400; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58582'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=asd+'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=asd+'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309866.287
+    'REQUEST_TIME' => 1492309866
+]
+2017-04-16 02:31:22 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant SPH_ATTR_BIGINT - assumed 'SPH_ATTR_BIGINT'' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:1229
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php(960): yii\coreseek\SphinxClient->RunQueries()
+#1 /var/www/html/blog/controllers/SiteController.php(30): yii\coreseek\SphinxClient->Query()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#8 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#9 {main}
+2017-04-16 02:31:22 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => '博客'
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site%2Fsearch&content=asd+'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58589'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=%E5%8D%9A%E5%AE%A2'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=%E5%8D%9A%E5%AE%A2'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309882.752
+    'REQUEST_TIME' => 1492309882
+]
+2017-04-16 02:31:47 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:31:47 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => 'asd '
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=report/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58594'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=asd+'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=asd+'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309907.907
+    'REQUEST_TIME' => 1492309907
+]
+2017-04-16 02:31:58 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:31:58 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => '博客'
+]
+
+$_COOKIE = [
+    'scrollTop' => '100'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=100; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58602'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=%E5%8D%9A%E5%AE%A2'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=%E5%8D%9A%E5%AE%A2'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309918.236
+    'REQUEST_TIME' => 1492309918
+]
+2017-04-16 02:32:57 [221.7.82.195][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'yii\coreseek\SphinxClient' not found' in /var/www/html/blog/controllers/SiteController.php:25
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#5 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#6 {main}
+2017-04-16 02:32:57 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => '博客'
+]
+
+$_COOKIE = [
+    'scrollTop' => '100'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=100; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58668'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=%E5%8D%9A%E5%AE%A2'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=%E5%8D%9A%E5%AE%A2'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492309977.038
+    'REQUEST_TIME' => 1492309977
+]
+2017-04-16 02:34:23 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:34:23 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => '阿斯蒂芬'
+]
+
+$_COOKIE = [
+    'scrollTop' => '200'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=200; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58754'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=%E9%98%BF%E6%96%AF%E8%92%82%E8%8A%AC'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=%E9%98%BF%E6%96%AF%E8%92%82%E8%8A%AC'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310063.348
+    'REQUEST_TIME' => 1492310063
+]
+2017-04-16 02:35:04 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:35:04 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => '阿斯蒂芬'
+]
+
+$_COOKIE = [
+    'scrollTop' => '200'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=200; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58859'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=%E9%98%BF%E6%96%AF%E8%92%82%E8%8A%AC'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=%E9%98%BF%E6%96%AF%E8%92%82%E8%8A%AC'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310104.838
+    'REQUEST_TIME' => 1492310104
+]
+2017-04-16 02:35:09 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:35:09 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '200'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=200; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58863'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310109.449
+    'REQUEST_TIME' => 1492310109
+]
+2017-04-16 02:36:34 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$photo' in /var/www/html/blog/models/ArticleMesh.php:31
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#6 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#7 {main}
+2017-04-16 02:36:33 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+    'seGqxV_think_language' => 'zh-CN'
+    'seGqxV_admin_username' => 'admin'
+    'refersh_time' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=report/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B; seGqxV_think_language=zh-CN; seGqxV_admin_username=admin; refersh_time=1'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58950'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/index'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/index'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310193.973
+    'REQUEST_TIME' => 1492310193
+]
+2017-04-16 02:37:04 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:37:04 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '400'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+    'seGqxV_think_language' => 'zh-CN'
+    'seGqxV_admin_username' => 'admin'
+    'refersh_time' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=400; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B; seGqxV_think_language=zh-CN; seGqxV_admin_username=admin; refersh_time=1'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59084'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310224.752
+    'REQUEST_TIME' => 1492310224
+]
+2017-04-16 02:40:09 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:40:09 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+    'seGqxV_think_language' => 'zh-CN'
+    'seGqxV_admin_username' => 'admin'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B; seGqxV_think_language=zh-CN; seGqxV_admin_username=admin; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59303'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310409.703
+    'REQUEST_TIME' => 1492310409
+]
+2017-04-16 02:40:59 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:40:58 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+    'seGqxV_think_language' => 'zh-CN'
+    'seGqxV_admin_username' => 'admin'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B; seGqxV_think_language=zh-CN; seGqxV_admin_username=admin; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59420'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310458.998
+    'REQUEST_TIME' => 1492310458
+]
+2017-04-16 02:41:01 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:41:01 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+    'seGqxV_think_language' => 'zh-CN'
+    'seGqxV_admin_username' => 'admin'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B; seGqxV_think_language=zh-CN; seGqxV_admin_username=admin; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59421'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310461.892
+    'REQUEST_TIME' => 1492310461
+]
+2017-04-16 02:41:05 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:41:05 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+    'seGqxV_think_language' => 'zh-CN'
+    'seGqxV_admin_username' => 'admin'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B; seGqxV_think_language=zh-CN; seGqxV_admin_username=admin; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59449'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310465.947
+    'REQUEST_TIME' => 1492310465
+]
+2017-04-16 02:42:26 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:42:26 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+    'PHPSESSID' => 'h48dm0tk5rs66vhr7fm4p6tok3'
+    '_csrf' => 'f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s:32:\"hOaJoj129UHxoJXWOnTJUWocp2q-n_LG\";'
+    'seGqxV_think_language' => 'zh-CN'
+    'seGqxV_admin_username' => 'admin'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300; PHPSESSID=h48dm0tk5rs66vhr7fm4p6tok3; _csrf=f2b0194b728c8a0cbbfdbb3d8348737bca55a7b531434c0b7f74915975f8bfa4s%3A32%3A%22hOaJoj129UHxoJXWOnTJUWocp2q-n_LG%22%3B; seGqxV_think_language=zh-CN; seGqxV_admin_username=admin; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59631'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310546.724
+    'REQUEST_TIME' => 1492310546
+]
+2017-04-16 02:42:53 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:42:53 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59660'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310573.527
+    'REQUEST_TIME' => 1492310573
+]
+2017-04-16 02:44:44 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:26
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:44:44 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59802'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310684.315
+    'REQUEST_TIME' => 1492310684
+]
+2017-04-16 02:45:12 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(25): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:45:12 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => ''
+]
+
+$_COOKIE = [
+    'scrollTop' => '300'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=300'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59903'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content='
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content='
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492310712.816
+    'REQUEST_TIME' => 1492310712
+]
+2017-04-16 02:56:25 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(27): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(27): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:56:25 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => '阿斯蒂芬'
+]
+
+$_COOKIE = [
+    'scrollTop' => '238'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=238'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '61382'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=%E9%98%BF%E6%96%AF%E8%92%82%E8%8A%AC'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=%E9%98%BF%E6%96%AF%E8%92%82%E8%8A%AC'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492311385.098
+    'REQUEST_TIME' => 1492311385
+]
+2017-04-16 02:56:32 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Constant SEARCHD_OK already defined' in /var/www/html/blog/vendor/yiisoft/yii2/coreseek/SphinxClient.php:41
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/BaseYii.php(288): ::unknown()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(27): yii\BaseYii::autoload()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(27): ::spl_autoload_call()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionSearch()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#9 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#10 {main}
+2017-04-16 02:56:32 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/search'
+    'content' => 'sd发生的'
+]
+
+$_COOKIE = [
+    'scrollTop' => '238'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=238'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '61386'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsearch&content=sd%E5%8F%91%E7%94%9F%E7%9A%84'
+    'REQUEST_URI' => '/blog/web/index.php?r=site%2Fsearch&content=sd%E5%8F%91%E7%94%9F%E7%9A%84'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492311392.136
+    'REQUEST_TIME' => 1492311392
+]
+2017-04-17 09:26:05 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$photo' in /var/www/html/blog/models/ArticleMesh.php:31
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#6 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#7 {main}
+2017-04-17 09:26:05 [221.7.82.195][-][-][info][application] $_COOKIE = [
+    'scrollTop' => '500'
+    'seGqxV_think_language' => 'zh-CN'
+    'PHPSESSID' => '1ngsnn8jglonl9h81srfhj64e7'
+    'seGqxV_admin_username' => '半粒糖'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; seGqxV_think_language=zh-CN; PHPSESSID=1ngsnn8jglonl9h81srfhj64e7; seGqxV_admin_username=%E5%8D%8A%E7%B2%92%E7%B3%96; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '61742'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/index.php'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492421165.101
+    'REQUEST_TIME' => 1492421165
+]
+2017-04-17 09:26:19 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$photo' in /var/www/html/blog/models/ArticleMesh.php:31
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#6 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#7 {main}
+2017-04-17 09:26:19 [221.7.82.195][-][-][info][application] $_COOKIE = [
+    'scrollTop' => '500'
+    'seGqxV_think_language' => 'zh-CN'
+    'PHPSESSID' => '1ngsnn8jglonl9h81srfhj64e7'
+    'seGqxV_admin_username' => '半粒糖'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; seGqxV_think_language=zh-CN; PHPSESSID=1ngsnn8jglonl9h81srfhj64e7; seGqxV_admin_username=%E5%8D%8A%E7%B2%92%E7%B3%96; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '61751'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/index.php'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492421179.287
+    'REQUEST_TIME' => 1492421179
+]
+2017-04-17 09:26:20 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$photo' in /var/www/html/blog/models/ArticleMesh.php:31
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#6 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#7 {main}
+2017-04-17 09:26:19 [221.7.82.195][-][-][info][application] $_COOKIE = [
+    'scrollTop' => '500'
+    'seGqxV_think_language' => 'zh-CN'
+    'PHPSESSID' => '1ngsnn8jglonl9h81srfhj64e7'
+    'seGqxV_admin_username' => '半粒糖'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; seGqxV_think_language=zh-CN; PHPSESSID=1ngsnn8jglonl9h81srfhj64e7; seGqxV_admin_username=%E5%8D%8A%E7%B2%92%E7%B3%96; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '61750'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/index.php'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492421179.988
+    'REQUEST_TIME' => 1492421179
+]
+2017-04-17 09:26:20 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$photo' in /var/www/html/blog/models/ArticleMesh.php:31
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#6 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#7 {main}
+2017-04-17 09:26:20 [221.7.82.195][-][-][info][application] $_COOKIE = [
+    'scrollTop' => '500'
+    'seGqxV_think_language' => 'zh-CN'
+    'PHPSESSID' => '1ngsnn8jglonl9h81srfhj64e7'
+    'seGqxV_admin_username' => '半粒糖'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; seGqxV_think_language=zh-CN; PHPSESSID=1ngsnn8jglonl9h81srfhj64e7; seGqxV_admin_username=%E5%8D%8A%E7%B2%92%E7%B3%96; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '61752'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/index.php'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492421180.546
+    'REQUEST_TIME' => 1492421180
+]
+2017-04-18 07:00:09 [139.162.108.53][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$photo' in /var/www/html/blog/models/ArticleMesh.php:31
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#6 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#7 {main}
+2017-04-18 07:00:09 [139.162.108.53][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => '123.206.81.240:80'
+    'HTTP_USER_AGENT' => 'Go-http-client/1.1'
+    'HTTP_REFERER' => 'http://123.206.81.240:80/'
+    'HTTP_CONNECTION' => 'close'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at 123.206.81.240 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => '123.206.81.240'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '139.162.108.53'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '36892'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/index.php'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492498809.506
+    'REQUEST_TIME' => 1492498809
+]
+2017-04-18 07:29:24 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$photo' in /var/www/html/blog/models/ArticleMesh.php:31
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#6 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#7 {main}
+2017-04-18 07:29:24 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    'scrollTop' => '0'
+    'seGqxV_think_language' => 'zh-CN'
+    'PHPSESSID' => 'ufe5tqeg65mjiggbf53h6nlqb0'
+    'seGqxV_admin_username' => 'admin'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/show-article-by-tab&tab=coreseek/sphinx'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=0; seGqxV_think_language=zh-CN; PHPSESSID=ufe5tqeg65mjiggbf53h6nlqb0; seGqxV_admin_username=admin; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58114'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/index'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/index'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492500564.887
+    'REQUEST_TIME' => 1492500564
+]
+2017-04-18 07:31:01 [221.7.82.195][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined property: stdClass::$photo' in /var/www/html/blog/models/ArticleMesh.php:31
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#2 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction()
+#4 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction()
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#6 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#7 {main}
+2017-04-18 07:31:01 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    'scrollTop' => '0'
+    'seGqxV_think_language' => 'zh-CN'
+    'PHPSESSID' => 'ufe5tqeg65mjiggbf53h6nlqb0'
+    'seGqxV_admin_username' => 'admin'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/show-article-by-tab&tab=coreseek/sphinx'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=0; seGqxV_think_language=zh-CN; PHPSESSID=ufe5tqeg65mjiggbf53h6nlqb0; seGqxV_admin_username=admin; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58150'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/index'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/index'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492500661.128
+    'REQUEST_TIME' => 1492500661
+]
+2017-04-18 07:59:07 [221.7.82.195][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_term' doesn't exist' in /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php:819
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(819): PDOStatement->execute()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(373): yii\db\Command->queryScalar()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 /var/www/html/blog/controllers/TraitController.php(26): yii\db\Query->count()
+#5 /var/www/html/blog/controllers/SiteController.php(161): app\controllers\TraitController::paging(Object(yii\db\ActiveQuery), 'post_date')
+#6 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_term' doesn't exist
+The SQL being executed was: SELECT COUNT(*) FROM `v_article_term` WHERE name='Web前端'' in /var/www/html/blog/vendor/yiisoft/yii2/db/Schema.php:532
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(373): yii\db\Command->queryScalar()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 /var/www/html/blog/controllers/TraitController.php(26): yii\db\Query->count()
+#5 /var/www/html/blog/controllers/SiteController.php(161): app\controllers\TraitController::paging(Object(yii\db\ActiveQuery), 'post_date')
+#6 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'diandi.v_article_term' doesn't exist
+)
+
+2017-04-18 07:59:07 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/show-article-by-tab'
+    'tab' => 'Web前端'
+]
+
+$_COOKIE = [
+    'scrollTop' => '500'
+    'PHPSESSID' => 'ufe5tqeg65mjiggbf53h6nlqb0'
+    'seGqxV_admin_username' => 'admin'
+    'seGqxV_think_language' => 'zh-CN'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; PHPSESSID=ufe5tqeg65mjiggbf53h6nlqb0; seGqxV_admin_username=admin; seGqxV_think_language=zh-CN; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58812'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492502347.637
+    'REQUEST_TIME' => 1492502347
+]
+2017-04-18 07:59:07 [221.7.82.195][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_term' doesn't exist' in /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php:819
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(819): PDOStatement->execute()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(373): yii\db\Command->queryScalar()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 /var/www/html/blog/controllers/TraitController.php(26): yii\db\Query->count()
+#5 /var/www/html/blog/controllers/SiteController.php(161): app\controllers\TraitController::paging(Object(yii\db\ActiveQuery), 'post_date')
+#6 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_term' doesn't exist
+The SQL being executed was: SELECT COUNT(*) FROM `v_article_term` WHERE name='Web前端'' in /var/www/html/blog/vendor/yiisoft/yii2/db/Schema.php:532
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(373): yii\db\Command->queryScalar()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 /var/www/html/blog/controllers/TraitController.php(26): yii\db\Query->count()
+#5 /var/www/html/blog/controllers/SiteController.php(161): app\controllers\TraitController::paging(Object(yii\db\ActiveQuery), 'post_date')
+#6 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#7 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'diandi.v_article_term' doesn't exist
+)
+
+2017-04-18 07:59:07 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/show-article-by-tab'
+    'tab' => 'Web前端'
+]
+
+$_COOKIE = [
+    'scrollTop' => '500'
+    'PHPSESSID' => 'ufe5tqeg65mjiggbf53h6nlqb0'
+    'seGqxV_admin_username' => 'admin'
+    'seGqxV_think_language' => 'zh-CN'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; PHPSESSID=ufe5tqeg65mjiggbf53h6nlqb0; seGqxV_admin_username=admin; seGqxV_think_language=zh-CN; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '58813'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492502347.982
+    'REQUEST_TIME' => 1492502347
+]
+2017-04-18 08:08:05 [221.7.82.195][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_mesh' doesn't exist' in /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php:819
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(819): PDOStatement->execute()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 /var/www/html/blog/models/ArticleMesh.php(65): yii\db\ActiveQuery->all()
+#5 /var/www/html/blog/controllers/TraitController.php(127): app\models\ArticleMesh::getArticleCulling()
+#6 /var/www/html/blog/controllers/SiteController.php(169): app\controllers\TraitController::getPageInitData(NULL, NULL, NULL)
+#7 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#12 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_mesh' doesn't exist
+The SQL being executed was: SELECT `id`, `post_date`, `post_title` FROM `v_article_mesh` WHERE `recommended`=1 LIMIT 10' in /var/www/html/blog/vendor/yiisoft/yii2/db/Schema.php:532
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Schema->convertException(Object(PDOException), 'SELECT `id`, `p...')
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 /var/www/html/blog/models/ArticleMesh.php(65): yii\db\ActiveQuery->all()
+#5 /var/www/html/blog/controllers/TraitController.php(127): app\models\ArticleMesh::getArticleCulling()
+#6 /var/www/html/blog/controllers/SiteController.php(169): app\controllers\TraitController::getPageInitData(NULL, NULL, NULL)
+#7 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#12 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'diandi.v_article_mesh' doesn't exist
+)
+
+2017-04-18 08:08:05 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/show-article-by-tab'
+    'tab' => 'Web前端'
+]
+
+$_COOKIE = [
+    'scrollTop' => '500'
+    'PHPSESSID' => 'ufe5tqeg65mjiggbf53h6nlqb0'
+    'seGqxV_admin_username' => 'admin'
+    'seGqxV_think_language' => 'zh-CN'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; PHPSESSID=ufe5tqeg65mjiggbf53h6nlqb0; seGqxV_admin_username=admin; seGqxV_think_language=zh-CN; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59254'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492502885.22
+    'REQUEST_TIME' => 1492502885
+]
+2017-04-18 08:08:06 [221.7.82.195][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_mesh' doesn't exist' in /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php:819
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(819): PDOStatement->execute()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 /var/www/html/blog/models/ArticleMesh.php(65): yii\db\ActiveQuery->all()
+#5 /var/www/html/blog/controllers/TraitController.php(127): app\models\ArticleMesh::getArticleCulling()
+#6 /var/www/html/blog/controllers/SiteController.php(169): app\controllers\TraitController::getPageInitData(NULL, NULL, NULL)
+#7 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#12 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_mesh' doesn't exist
+The SQL being executed was: SELECT `id`, `post_date`, `post_title` FROM `v_article_mesh` WHERE `recommended`=1 LIMIT 10' in /var/www/html/blog/vendor/yiisoft/yii2/db/Schema.php:532
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Schema->convertException(Object(PDOException), 'SELECT `id`, `p...')
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 /var/www/html/blog/models/ArticleMesh.php(65): yii\db\ActiveQuery->all()
+#5 /var/www/html/blog/controllers/TraitController.php(127): app\models\ArticleMesh::getArticleCulling()
+#6 /var/www/html/blog/controllers/SiteController.php(169): app\controllers\TraitController::getPageInitData(NULL, NULL, NULL)
+#7 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#12 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'diandi.v_article_mesh' doesn't exist
+)
+
+2017-04-18 08:08:06 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/show-article-by-tab'
+    'tab' => 'Web前端'
+]
+
+$_COOKIE = [
+    'scrollTop' => '500'
+    'PHPSESSID' => 'ufe5tqeg65mjiggbf53h6nlqb0'
+    'seGqxV_admin_username' => 'admin'
+    'seGqxV_think_language' => 'zh-CN'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; PHPSESSID=ufe5tqeg65mjiggbf53h6nlqb0; seGqxV_admin_username=admin; seGqxV_think_language=zh-CN; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59255'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492502886.403
+    'REQUEST_TIME' => 1492502886
+]
+2017-04-18 08:12:40 [221.7.82.195][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_mesh' doesn't exist' in /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php:819
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(819): PDOStatement->execute()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 /var/www/html/blog/models/ArticleMesh.php(65): yii\db\ActiveQuery->all()
+#5 /var/www/html/blog/controllers/TraitController.php(127): app\models\ArticleMesh::getArticleCulling()
+#6 /var/www/html/blog/controllers/SiteController.php(169): app\controllers\TraitController::getPageInitData(NULL, NULL, NULL)
+#7 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#12 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_mesh' doesn't exist
+The SQL being executed was: SELECT `id`, `post_date`, `post_title` FROM `v_article_mesh` WHERE `recommended`=1 LIMIT 10' in /var/www/html/blog/vendor/yiisoft/yii2/db/Schema.php:532
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Schema->convertException(Object(PDOException), 'SELECT `id`, `p...')
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 /var/www/html/blog/models/ArticleMesh.php(65): yii\db\ActiveQuery->all()
+#5 /var/www/html/blog/controllers/TraitController.php(127): app\models\ArticleMesh::getArticleCulling()
+#6 /var/www/html/blog/controllers/SiteController.php(169): app\controllers\TraitController::getPageInitData(NULL, NULL, NULL)
+#7 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#12 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'diandi.v_article_mesh' doesn't exist
+)
+
+2017-04-18 08:12:40 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/show-article-by-tab'
+    'tab' => 'Web前端'
+]
+
+$_COOKIE = [
+    'scrollTop' => '500'
+    'PHPSESSID' => 'ufe5tqeg65mjiggbf53h6nlqb0'
+    'seGqxV_admin_username' => 'admin'
+    'seGqxV_think_language' => 'zh-CN'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; PHPSESSID=ufe5tqeg65mjiggbf53h6nlqb0; seGqxV_admin_username=admin; seGqxV_think_language=zh-CN; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59378'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492503160.715
+    'REQUEST_TIME' => 1492503160
+]
+2017-04-18 08:12:41 [221.7.82.195][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_mesh' doesn't exist' in /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php:819
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(819): PDOStatement->execute()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 /var/www/html/blog/models/ArticleMesh.php(65): yii\db\ActiveQuery->all()
+#5 /var/www/html/blog/controllers/TraitController.php(127): app\models\ArticleMesh::getArticleCulling()
+#6 /var/www/html/blog/controllers/SiteController.php(169): app\controllers\TraitController::getPageInitData(NULL, NULL, NULL)
+#7 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#12 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_mesh' doesn't exist
+The SQL being executed was: SELECT `id`, `post_date`, `post_title` FROM `v_article_mesh` WHERE `recommended`=1 LIMIT 10' in /var/www/html/blog/vendor/yiisoft/yii2/db/Schema.php:532
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Schema->convertException(Object(PDOException), 'SELECT `id`, `p...')
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 /var/www/html/blog/models/ArticleMesh.php(65): yii\db\ActiveQuery->all()
+#5 /var/www/html/blog/controllers/TraitController.php(127): app\models\ArticleMesh::getArticleCulling()
+#6 /var/www/html/blog/controllers/SiteController.php(169): app\controllers\TraitController::getPageInitData(NULL, NULL, NULL)
+#7 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#12 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'diandi.v_article_mesh' doesn't exist
+)
+
+2017-04-18 08:12:41 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/show-article-by-tab'
+    'tab' => 'Web前端'
+]
+
+$_COOKIE = [
+    'scrollTop' => '500'
+    'PHPSESSID' => 'ufe5tqeg65mjiggbf53h6nlqb0'
+    'seGqxV_admin_username' => 'admin'
+    'seGqxV_think_language' => 'zh-CN'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; PHPSESSID=ufe5tqeg65mjiggbf53h6nlqb0; seGqxV_admin_username=admin; seGqxV_think_language=zh-CN; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59377'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492503161.727
+    'REQUEST_TIME' => 1492503161
+]
+2017-04-18 08:15:03 [221.7.82.195][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_mesh' doesn't exist' in /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php:819
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(819): PDOStatement->execute()
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 /var/www/html/blog/models/ArticleMesh.php(65): yii\db\ActiveQuery->all()
+#5 /var/www/html/blog/controllers/TraitController.php(127): app\models\ArticleMesh::getArticleCulling()
+#6 /var/www/html/blog/controllers/SiteController.php(169): app\controllers\TraitController::getPageInitData(NULL, NULL, NULL)
+#7 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#12 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diandi.v_article_mesh' doesn't exist
+The SQL being executed was: SELECT `id`, `post_date`, `post_title` FROM `v_article_mesh` WHERE `recommended`=1 LIMIT 10' in /var/www/html/blog/vendor/yiisoft/yii2/db/Schema.php:532
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Schema->convertException(Object(PDOException), 'SELECT `id`, `p...')
+#1 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 /var/www/html/blog/vendor/yiisoft/yii2/db/Query.php(206): yii\db\Command->queryAll()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/db/ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 /var/www/html/blog/models/ArticleMesh.php(65): yii\db\ActiveQuery->all()
+#5 /var/www/html/blog/controllers/TraitController.php(127): app\models\ArticleMesh::getArticleCulling()
+#6 /var/www/html/blog/controllers/SiteController.php(169): app\controllers\TraitController::getPageInitData(NULL, NULL, NULL)
+#7 [internal function]: app\controllers\SiteController->actionShowArticleByTab()
+#8 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('show-article-by...', Array)
+#11 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('site/show-artic...', Array)
+#12 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'diandi.v_article_mesh' doesn't exist
+)
+
+2017-04-18 08:15:03 [221.7.82.195][-][-][info][application] $_GET = [
+    'r' => 'site/show-article-by-tab'
+    'tab' => 'Web前端'
+]
+
+$_COOKIE = [
+    'scrollTop' => '500'
+    'PHPSESSID' => 'ufe5tqeg65mjiggbf53h6nlqb0'
+    'seGqxV_admin_username' => 'admin'
+    'seGqxV_think_language' => 'zh-CN'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://www.donep.cn/blog/web/index.php?r=site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; PHPSESSID=ufe5tqeg65mjiggbf53h6nlqb0; seGqxV_admin_username=admin; seGqxV_think_language=zh-CN; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59410'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'REQUEST_URI' => '/blog/web/index.php?r=site/show-article-by-tab&tab=Web%E5%89%8D%E7%AB%AF'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492503303.034
+    'REQUEST_TIME' => 1492503303
+]
+2017-04-18 08:15:30 [221.7.82.195][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'author' in 'field list'' in /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php:768
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(768): PDOStatement->execute()
+#1 /var/www/html/blog/controllers/SiteController.php(109): yii\db\Command->execute()
+#2 [internal function]: app\controllers\SiteController->actionIndex()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#6 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('', Array)
+#7 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#9 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'author' in 'field list'
+The SQL being executed was: call p_replace_article_mesh' in /var/www/html/blog/vendor/yiisoft/yii2/db/Schema.php:532
+Stack trace:
+#0 /var/www/html/blog/vendor/yiisoft/yii2/db/Command.php(776): yii\db\Schema->convertException(Object(PDOException), 'call p_replace_...')
+#1 /var/www/html/blog/controllers/SiteController.php(109): yii\db\Command->execute()
+#2 [internal function]: app\controllers\SiteController->actionIndex()
+#3 /var/www/html/blog/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /var/www/html/blog/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/blog/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#6 /var/www/html/blog/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('', Array)
+#7 /var/www/html/blog/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/blog/web/index.php(16): yii\base\Application->run()
+#9 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'author' in 'field list'
+)
+
+2017-04-18 08:15:30 [221.7.82.195][-][-][info][application] $_COOKIE = [
+    'scrollTop' => '500'
+    'PHPSESSID' => 'ufe5tqeg65mjiggbf53h6nlqb0'
+    'seGqxV_admin_username' => 'admin'
+    'seGqxV_think_language' => 'zh-CN'
+    'refersh_time' => '0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.donep.cn'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'scrollTop=500; PHPSESSID=ufe5tqeg65mjiggbf53h6nlqb0; seGqxV_admin_username=admin; seGqxV_think_language=zh-CN; refersh_time=0'
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.2.15 (CentOS) Server at www.donep.cn Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.2.15 (CentOS)'
+    'SERVER_NAME' => 'www.donep.cn'
+    'SERVER_ADDR' => '10.141.77.179'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '221.7.82.195'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'root@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/blog/web/index.php'
+    'REMOTE_PORT' => '59418'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/blog/web/index.php'
+    'SCRIPT_NAME' => '/blog/web/index.php'
+    'PHP_SELF' => '/blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1492503330.594
+    'REQUEST_TIME' => 1492503330
+]
